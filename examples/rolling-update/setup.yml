@@ -1,9 +1,10 @@
+# we need the facts about the web hosts for the proxy 
+# so we run the first "task-less" play. 
 ---
-- hosts: "{{ web_group | default('web') }}"
-- hosts: "{{ haproxy_host | default('haproxy') }}"
-  name: "Installation and configuration of a HA Proxy service"
+- hosts: web
+  gather_facts: yes
+- hosts: haproxy
+  name: "Single haproxy service is present and started"
   become: yes
   roles:
-    # - tima.epel-repo
-    - apache-simple
     - haproxy-simple

@@ -1,4 +1,4 @@
 ---
 # defaults for haproxy
-web_group: web
-iface: 0
+haproxy_iface: 0
+haproxy_service_port: 80

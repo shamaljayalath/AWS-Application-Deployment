@@ -1,13 +1,15 @@
 ---
-- hosts: "{{ web_group }}:{{ haproxy_host }}"
+- hosts: web:haproxy
   gather_facts: yes
 
-- hosts: "{{ web_group }}"
+- hosts: web
   name: performs rolling restart
   gather_facts: no
   serial: 1
   become: yes
-
+  vars:
+    haproxy_host: "{{ groups['haproxy'] | first }}"
+  
   # note: assume a single haproxy
   pre_tasks:
     - name: disable the server in haproxy
@@ -15,16 +17,19 @@
         state: disabled 
         host: "{{ inventory_hostname }}"
         backend: web_backend
-      delegate_to: "{{ groups[haproxy_host][0] }}"
+      delegate_to: "{{ haproxy_host }}"
 
   roles:
-    - 8ball-service
+    - apache-simple 
 
   post_tasks:
+    - name: pause for demonstration purposes
+      pause:
+        seconds: 10
     - name: enable the server in haproxy
       haproxy: 
         state: enabled 
         host: "{{ inventory_hostname }}"
         backend: web_backend
-      delegate_to: "{{ groups[haproxy_host][0] }}"
+      delegate_to: "{{ haproxy_host }}"
 
