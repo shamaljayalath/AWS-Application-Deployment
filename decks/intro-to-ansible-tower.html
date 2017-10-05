@@ -335,178 +335,171 @@ $ wget https://bit.ly/ansibletowerbundle
           </section>
         </section>
         <section>
-          <h2>More with Ansible Tower</h2>
-          <ul>
-            <li>User Surveys (Self-Service)</li>
-            <li>Job Scheduling</li>
-            <li>Notifications</li>
-            <li>Ad-Hoc Commands</li>
-            <li>Workflows (New in v3.1)</li>
-            <li>System Scanning</li>
-            <li>Logging Aggregation (New in v3.1)</li>
-            <li>Advanced Configuration Options</li>
-          </ul>
-          <aside class="notes speaker">
-						<p>Make sure to visit docs.ansible.com to learn about the following advanced topics for Ansible Tower:</p>
-						<ul>
-							<li>User Surveys allow for job templates to be created with input from your end users at runtime. This allows for unique variable structures to each run, based on input from the person executing the job template.</li>
-						  <li>Job scheduling is just that: The ability to schedule when tower executes a job template - and not just job templates you create. You can also schedule inventory updates, scan jobs, and SCM project updates.</li>
-						  <li>Notifications allow for Ansible Tower to reach out via standard plugins such as email, chat/messaging, or custom API call to report returns on job runs, failures of jobs, or other needed info for your teams.</li>
-							<li>Ad-Hoc commands allow you to run a single ansible task against your inventory, from one machine to all if needed.</li>
-							<li>Workflows are a new feature in Ansible Tower 3.1 that allow for decisioning and daisy-chaining of job templates to create a full automation workflow across your projects. They allow for job templates to be triggered both on success and on failure, creating a fully featured automation tool with decisioning capabilities in case of failure.</li>
-							<li>System Scanning is a special type of job template that creates a repository of data over time to track changes on hosts in your inventory. You can track things such as files, packages installed or create custom data points to track.</li>
-							<li>Logging aggregation features new in 3.1 allow for Ansible Tower's runtime logging and scan data to be shipped to a variety of Enterprise Logging applications. Included in the integration is support for Splunk, Loggly, elasticache and other useful log aggregator and analysis tools.</li>
-							<li>Advanced Configuration Options include things such as external databases, LDAP/AD authentication, disaster recovery and clustering (New in v3.1) schemes.</li>
-						</ul>
-          </aside>
+          <section>
+            <h2>More with Ansible Tower</h2>
+            <ul>
+              <li>Job Status Updates</li>
+              <li>Activity Stream</li>
+              <li>Integrated Notifications</li>
+              <li>Schedule Jobs</li>
+              <li>Manage and Track Your Inventory</li>
+              <li>Self Service IT (User Surveys)</li>
+              <li>Remote Command Execution</li>
+              <li>External Logging</li>
+              <li>Multi-Playbook Workflows</li>
+            </ul>
+            <aside class="notes">
+            <p>What we've shown you so far are only the basics of what Ansible Tower can do to scale the automation activity in your organization. Here are some other features that have been added to Tower.</p>
+            <p>You can navigate down into slides with more detail on each or return to these at a later date when you the time.</p>
+            </aside>
+          </section>
+
+          <!-- NEW SLIDES BEGIN HERE -->
+          <section>
+            <h2>Job Status Update</h2>
+            <div class="columns">
+              <div class="col">
+                  <p>Heads-up NOC-style <strong>automation dashboard</strong> displays everything going on in your Ansible environment.</p>
+              </div>
+              <div class="col" style="flex-grow: 10;">
+                  <img src="images/tower/job-status-update.png" alt="" />
+              </div>
+            </div>
+            <aside class="notes speaker">
+
+            </aside>
+          </section>
+
+
+          <section>
+            <h2>Activity Stream</h2>
+            <div class="columns">
+              <div class="col" style="flex-grow: 10;">
+                  <img src="images/tower/activity-stream.png" alt="" />
+              </div>
+              <div class="col">
+                  <p>Securely stores every Job that runs, and enables you to view them later, or export details through Ansible Tower’s API.</p>
+              </div>
+            </div>
+            <aside class="notes speaker">
+
+            </aside>
+          </section>
+
+
+          <section>
+            <h2>Integrated Notifications</h2>
+            <div class="columns">
+              <div class="col">
+                  <p>Stay informed of your automation status via integrated notifications. Connect Slack, Hipchat, SMS, email and more. </p>
+              </div>
+              <div class="col" style="flex-grow: 10;">
+                  <img src="images/tower/integrated-notifications.png" alt="" />
+              </div>
+            </div>
+            <aside class="notes speaker">
+
+            </aside>
+          </section>
+
+
+          <section>
+            <h2>Schedule Jobs</h2>
+            <div class="columns">
+              <div class="col" style="flex-grow: 10;">
+                  <img src="images/tower/schedule-jobs.png" alt="" />
+              </div>
+              <div class="col">
+                  <p>Enables you to any Job now, later, or forever.</p>
+              </div>
+            </div>
+            <aside class="notes speaker">
+
+            </aside>
+          </section>
+
+
+          <section>
+            <h2>Manage and Track Your Inventory</h2>
+            <div class="columns">
+              <div class="col">
+                  <p>Ansible Tower’s <strong>inventory syncing</strong> and <strong>provisioning callbacks</strong> allow nodes to request configuration on demand, enabling autoscaling.</p>
+              </div>
+              <div class="col" style="flex-grow: 10;">
+                  <img src="images/tower/manage-track-inventory.png" alt="" />
+              </div>
+            </div>
+            <aside class="notes speaker">
+
+            </aside>
+          </section>
+
+
+          <section>
+            <h2>Self Service IT</h2>
+            <div class="columns">
+              <div class="col" style="flex-grow: 10;">
+                  <img src="images/tower/self-service-it.png" alt="" />
+              </div>
+              <div class="col">
+                  <p>Ansible Tower lets you launch Playbooks with just a single click. It can prompt you for variables, let you choose from available secure credentials and monitor the resulting deployments.</p>
+              </div>
+            </div>
+            <aside class="notes speaker">
+
+            </aside>
+          </section>
+
+
+          <section>
+            <h2>Remote Command Execution</h2>
+            <div class="columns">
+              <div class="col">
+                  <p>Run simple tasks on any hosts with Ansible Tower's <strong>remote command execution</strong>. Add users or groups, reset passwords, restart a malfunctioning service or patch a critical security issue, quickly.</p>
+              </div>
+              <div class="col" style="flex-grow: 10;">
+                  <img src="images/tower/remote-command-execution.png" alt="" />
+              </div>
+            </div>
+            <aside class="notes speaker">
+
+            </aside>
+          </section>
+
+
+          <section>
+            <h2>External Logging</h2>
+            <div class="columns">
+              <div class="col" style="flex-grow: 10;">
+                  <img src="images/tower/external-logging.png" alt="" />
+              </div>
+              <div class="col">
+                  <p>Connect Ansible Tower to your external logging and analytics provider to perform analysis of automation and event correlation across your entire environment.</p>
+              </div>
+            </div>
+            <aside class="notes speaker">
+
+            </aside>
+          </section>
+
+
+          <section>
+            <h2>Multi-Playbook Workflows</h2>
+            <div class="columns">
+              <div class="col">
+                  <p>Ansible Tower’s multi-Playbook workflows chains any number of Playbooks together to create a single workflow. Different Jobs can be run depending on success or failure of the prior Playbook.</p>
+              </div>
+              <div class="col" style="flex-grow: 10;">
+                  <img src="images/tower/multi-playbook-workflows.png" alt="" />
+              </div>
+            </div>
+            <aside class="notes speaker">
+
+            </aside>
+          </section>
+
+          <!-- NEW SLIDES END HERE -->
         </section>
-
-        <!-- NEW SLIDES BEGIN HERE -->
-        <section>
-          <h2>Job Status Update</h2>
-          <div class="columns">
-            <div class="col">
-                <p>Heads-up NOC-style <strong>automation dashboard</strong> displays everything going on in your Ansible environment.</p>
-            </div>
-            <div class="col" style="flex-grow: 10;">
-                <img src="images/tower/job-status-update.png" alt="" />
-            </div>
-          </div>
-          <aside class="notes speaker">
-
-          </aside>
-        </section>
-
-
-        <section>
-          <h2>Activity Stream</h2>
-          <div class="columns">
-            <div class="col" style="flex-grow: 10;">
-                <img src="images/tower/activity-stream.png" alt="" />
-            </div>
-            <div class="col">
-                <p>Securely stores every Job that runs, and enables you to view them later, or export details through Ansible Tower’s API.</p>
-            </div>
-          </div>
-          <aside class="notes speaker">
-
-          </aside>
-        </section>
-
-
-        <section>
-          <h2>Integrated Notifications</h2>
-          <div class="columns">
-            <div class="col">
-                <p>Stay informed of your automation status via integrated notifications. Connect Slack, Hipchat, SMS, email and more. </p>
-            </div>
-            <div class="col" style="flex-grow: 10;">
-                <img src="images/tower/integrated-notifications.png" alt="" />
-            </div>
-          </div>
-          <aside class="notes speaker">
-
-          </aside>
-        </section>
-
-
-        <section>
-          <h2>Schedule Jobs</h2>
-          <div class="columns">
-            <div class="col" style="flex-grow: 10;">
-                <img src="images/tower/schedule-jobs.png" alt="" />
-            </div>
-            <div class="col">
-                <p>Enables you to any Job now, later, or forever.</p>
-            </div>
-          </div>
-          <aside class="notes speaker">
-
-          </aside>
-        </section>
-
-
-        <section>
-          <h2>Manage and Track Your Inventory</h2>
-          <div class="columns">
-            <div class="col">
-                <p>Ansible Tower’s <strong>inventory syncing</strong> and <strong>provisioning callbacks</strong> allow nodes to request configuration on demand, enabling autoscaling.</p>
-            </div>
-            <div class="col" style="flex-grow: 10;">
-                <img src="images/tower/manage-track-inventory.png" alt="" />
-            </div>
-          </div>
-          <aside class="notes speaker">
-
-          </aside>
-        </section>
-
-
-        <section>
-          <h2>Self Service IT</h2>
-          <div class="columns">
-            <div class="col" style="flex-grow: 10;">
-                <img src="images/tower/self-service-it.png" alt="" />
-            </div>
-            <div class="col">
-                <p>Ansible Tower lets you launch Playbooks with just a single click. It can prompt you for variables, let you choose from available secure credentials and monitor the resulting deployments.</p>
-            </div>
-          </div>
-          <aside class="notes speaker">
-
-          </aside>
-        </section>
-
-
-        <section>
-          <h2>Remote Command Execution</h2>
-          <div class="columns">
-            <div class="col">
-                <p>Run simple tasks on any hosts with Ansible Tower's <strong>remote command execution</strong>. Add users or groups, reset passwords, restart a malfunctioning service or patch a critical security issue, quickly.</p>
-            </div>
-            <div class="col" style="flex-grow: 10;">
-                <img src="images/tower/remote-command-execution.png" alt="" />
-            </div>
-          </div>
-          <aside class="notes speaker">
-
-          </aside>
-        </section>
-
-
-        <section>
-          <h2>External Logging</h2>
-          <div class="columns">
-            <div class="col" style="flex-grow: 10;">
-                <img src="images/tower/external-logging.png" alt="" />
-            </div>
-            <div class="col">
-                <p>Connect Ansible Tower to your external logging and analytics provider to perform analysis of automation and event correlation across your entire environment.</p>
-            </div>
-          </div>
-          <aside class="notes speaker">
-
-          </aside>
-        </section>
-
-
-        <section>
-          <h2>Multi-Playbook Workflows</h2>
-          <div class="columns">
-            <div class="col">
-                <p>Ansible Tower’s multi-Playbook workflows chains any number of Playbooks together to create a single workflow. Different Jobs can be run depending on success or failure of the prior Playbook.</p>
-            </div>
-            <div class="col" style="flex-grow: 10;">
-                <img src="images/tower/multi-playbook-workflows.png" alt="" />
-            </div>
-          </div>
-          <aside class="notes speaker">
-
-          </aside>
-        </section>
-
-        <!-- NEW SLIDES END HERE -->
-
         <section>
           <h2>Next Steps</h2>
           <ul>
