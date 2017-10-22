@@ -33,7 +33,7 @@ frontend web
 backend web_backend
         mode          http
         balance       roundrobin
-{% for host in groups['web'] %}
+{% for host in groups['web']|default(()) %}
 {% set ip_addr = hostvars[host]['ansible_all_ipv4_addresses'][haproxy_iface]  %}
 server        {{ hostvars[host]['inventory_hostname'] }} {{ ip_addr }}:{{ haproxy_service_port }} weight 1 maxconn 12083 check
 {% endfor %}
