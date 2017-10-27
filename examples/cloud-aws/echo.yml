@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  name: debug echo
+
+  tasks:
+    - name: reporting deployment status
+      debug:
+        msg: "{{ this_status_message }}"
