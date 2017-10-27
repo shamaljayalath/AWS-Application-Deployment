@@ -71,7 +71,7 @@
           cidr_ip: 0.0.0.0/0
 
   - name: stash vpc id as a fact
-    set_fact:
+    set_stats:
       vpc_subnet_id: "{{ vpc_subnet.subnet.id }}"
 
   - debug:
