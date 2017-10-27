@@ -1,0 +1,16 @@
+---
+- hosts: web
+  name: install and start nginx with wsgi
+  become: yes
+
+  tasks:
+    # smoke test that apache came up and is serving home page
+    # with Hello World in the apache_test_message
+    - name: proper response from localhost can be received
+      uri:
+        url: http://localhost/
+        return_content: yes
+      register: response
+      until: '"Hello World" in response.content'
+      retries: 10
+      delay: 1
