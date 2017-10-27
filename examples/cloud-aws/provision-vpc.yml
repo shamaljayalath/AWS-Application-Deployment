@@ -73,3 +73,7 @@
   - name: stash vpc id as a fact
     set_fact:
       vpc_subnet_id: "{{ vpc_subnet.subnet.id }}"
+
+  - debug:
+      var: vpc_subnet_id
+    verbosity: 1
