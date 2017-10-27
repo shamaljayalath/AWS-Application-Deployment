@@ -76,4 +76,4 @@
 
   - debug:
       var: vpc_subnet_id
-    verbosity: 1
+      verbosity: 1
