@@ -72,7 +72,8 @@
 
   - name: stash vpc id as a fact
     set_stats:
-      vpc_subnet_id: "{{ vpc_subnet.subnet.id }}"
+      data:
+        vpc_subnet_id: "{{ vpc_subnet.subnet.id }}"
 
   - debug:
       var: vpc_subnet_id
