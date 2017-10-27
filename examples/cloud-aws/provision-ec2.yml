@@ -5,7 +5,6 @@
   vars:
     # requires ec2_stack_name, ec2_region and ec2_key_name
     ec2_exact_count: 1
-    # vcp_subnet_id: "{{ hostvars['localhost']['vpc_subnet_id'] }}"
 
   tasks:
   - name: search for the latest centos7 ami
@@ -24,7 +23,7 @@
         volume_type: gp2
         volume_size: 8
         delete_on_termination: true
-      vpc_subnet_id: "{{ vcp_subnet_id }}"
+      vpc_subnet_id: "{{ vpc_subnet_id }}"
       instance_type: t2.micro
       image: "{{ find_results.results[0].ami_id }}"
       wait: true
