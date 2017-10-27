@@ -1,3 +1,4 @@
 ---
-- include: provision.yml
+- include: provision-vpc.yml
+- include: provision-ec2.yml
 - include: setup.yml
