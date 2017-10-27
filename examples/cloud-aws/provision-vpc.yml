@@ -70,7 +70,7 @@
           to_port: 443
           cidr_ip: 0.0.0.0/0
 
-  - name: stash vpc id as a fact
+  - name: stash vpc subnet id
     set_stats:
       data:
         vpc_subnet_id: "{{ vpc_subnet.subnet.id }}"
