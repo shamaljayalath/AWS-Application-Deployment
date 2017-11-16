@@ -1,6 +1,9 @@
 ---
 - hosts: web
-  name: This is a Playbook
+  name: apache and example site is deployed 
   become: yes
+  pre_tasks:
+    - raw: "yum -y upgrade"
+      ignore_errors: yes
   roles:
     - apache-simple
