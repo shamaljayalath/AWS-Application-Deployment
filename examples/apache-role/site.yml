@@ -2,12 +2,12 @@
 - hosts: web
   name: apache and example site is deployed 
   become: yes
-  pre_tasks:
-    - raw: "yum upgrade -y"
-      register: task_result
-      until: task_result.rc == 0
-      retries: 10
-      delay: 1
-      ignore_errors: yes
+  #  pre_tasks:
+  #  - raw: "yum upgrade -y"
+  #    register: task_result
+  #    until: task_result.rc == 0
+  #    retries: 10
+  #    delay: 1
+  #    ignore_errors: yes
   roles:
     - apache-simple
