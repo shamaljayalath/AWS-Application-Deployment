@@ -7,7 +7,7 @@
   tasks:
     - name: Launch Instace
       ec2:
-        Instace_type: t2.micro
+        Instance_type: t2.micro
         image: ami-67589505
         wait: yes
         group: webserver
