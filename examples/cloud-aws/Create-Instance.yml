@@ -5,9 +5,9 @@
   connection: local
 
   tasks:
-    - name: Launch Instace
+    - name: Launch Instance
       ec2:
-        Instance_type: t2.micro
+        instance_type: t2.micro
         image: ami-67589505
         wait: yes
         group: webserver
