@@ -1,0 +1,16 @@
+---
+- name: Ensure servers are provisioned in vpc
+  hosts: localhost
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: Launch Instace
+      ec2:
+        Instace_type: t2.micro
+        image: ami-67589505
+        wait: yes
+        group: webserver
+        count: 1
+        vpc_subnet_id: subnet-3936375e
+        assign_public_ip: yes
