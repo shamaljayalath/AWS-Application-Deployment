@@ -115,7 +115,7 @@
 
   - name: Pause to let cloud init to complete
     pause:
-      seconds: 90
+      seconds: 300
 
   - name: Build group of instances
     add_host:
