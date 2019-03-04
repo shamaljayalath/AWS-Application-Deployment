@@ -10,7 +10,7 @@
         instance_type: t2.micro
         image: ami-036affea69a1101c9
         wait: yes
-        group: webserver
+      #  group: webserver
         count: 1
         vpc_subnet_id: subnet-b0a397c9
         assign_public_ip: yes
