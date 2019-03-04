@@ -8,11 +8,11 @@
     - name: Launch Instance
       ec2:
         instance_type: t2.micro
-        image: ami-0b500ef59d8335eee
+        image: ami-036affea69a1101c9
         wait: yes
         group: webserver
         count: 1
-        vpc_subnet_id: subnet-523b063a
+        vpc_subnet_id: subnet-b0a397c9
         assign_public_ip: yes
         region: us-west-2
         key_name: Ansible
