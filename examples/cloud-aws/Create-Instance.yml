@@ -15,4 +15,4 @@
         vpc_subnet_id: subnet-b0a397c9
         assign_public_ip: yes
         region: us-west-2
-        key_name: Ansible
+        key_name: testus
