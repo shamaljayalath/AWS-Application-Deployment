@@ -1,6 +1,6 @@
 ---
 - name: Ensure apache is installed and started
-  hosts: all
+  hosts: local
   become: yes
   vars:
     httpd_packages:
