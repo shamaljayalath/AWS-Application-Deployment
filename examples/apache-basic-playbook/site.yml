@@ -1,6 +1,6 @@
 ---
 - name: Ensure apache is installed and started
-  hosts: 34.217.91.248
+  hosts: all
   become: yes
   vars:
     httpd_packages:
