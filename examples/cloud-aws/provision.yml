@@ -4,7 +4,7 @@
   gather_facts: false
   vars:
     # requires ec2_stack_name, ec2_region and ec2_key_name
-    ec2_exact_count: 1
+    ec2_exact_count: 2
     ec2_vpcidr: 10.251.0.0/16
     ec2_subnetcidr: 10.251.1.0/24
     ec2_az: a
