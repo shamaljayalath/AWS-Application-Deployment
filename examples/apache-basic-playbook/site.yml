@@ -6,7 +6,8 @@
     httpd_packages:
       - httpd
       - mod_wsgi
-    apache_test_message: This is a test message
+   # apache_test_message: This is a test message
+    apache_test_message: "{{ test_message }}"
     apache_webserver_port: 80
 
   tasks:
