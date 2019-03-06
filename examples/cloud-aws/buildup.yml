@@ -93,7 +93,7 @@
       image: "{{ find_results.results[0].ami_id }}"
       wait: true
       region: "{{ ec2_region }}"
-      exact_count: "{{ ec2_exact_count }}"
+  #    exact_count: "{{ ec2_exact_count }}"
       count_tag:
         Count: "{{ ec2_stack_name }}"
       instance_tags:
