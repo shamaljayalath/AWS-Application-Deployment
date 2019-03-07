@@ -11,8 +11,10 @@
         image: ami-036affea69a1101c9
         wait: yes
         group: default
-        count: 1
+        count: "{{ number_of_instances }}"
         vpc_subnet_id: subnet-b0a397c9
         assign_public_ip: yes
         region: us-west-2
         key_name: testus
+        
+        
